@@ -24,20 +24,23 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: color(primary);
-    
-    
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 5);
     grid-template-areas: 
-        "header    header"
-        "section1  section2"
-        "main      main"
-        "section3  section4"
-        "section5  section6"
-        "about     about";
+        "header"
+        "header"
+        "section1"
+        "section2"
+        "main"
+        "section3"
+        "section4"
+        "section5"
+        "section6"
+        "about"
+        "about";
 }
 
 
@@ -68,11 +71,10 @@ section:nth-of-type(2) {
         background:  #fff;
         padding: 20px;
         margin: 1rem auto;
-        border-radius: 15px;
+        border-radius: 3% 97% 3% 97% / 97% 3% 97% 3%;
         box-shadow: 0 10px 30px rgba(0,0,0,.2);
-        width: 50%;
+        width: 350px;
         margin-top: 6rem;
-        
     }
 
     ul {
@@ -101,33 +103,27 @@ section:nth-of-type(2) {
 
 main {
     grid-area: main;
-    height: 300px;
-    margin-bottom: 3rem;
+    margin: auto;
 
     #content {
         margin: 3rem;
         background-color: color(bottom);
-        border-radius:7px;
+        border-radius:1% 99% 1% 99% / 99% 1% 99% 1% ;
         padding: 3rem;
         box-shadow: 0 10px 30px rgba(0,0,0,.2);
     }
 
     #link {
-        font-size: 3rem;
-        margin-top: 4rem
+        font-size: 2rem;
+        margin:0;
     }
 }
 
 section:nth-of-type(3) {
     grid-area: section3;
     
-
     #column1 {
-        margin-top:2rem;
-        margin-left: 3rem;
-        margin-right: 1rem;
-        margin-bottom: 2rem;
-        
+        margin:1rem;
     }
 }
 
@@ -135,10 +131,7 @@ section:nth-of-type(4) {
     grid-area: section4;
 
     #column2 {
-        margin-top:2rem;
-
-        margin-right: 3rem;
-        margin-left: 1rem;
+        margin:1rem;
     }
 }
 
@@ -154,9 +147,15 @@ footer {
     grid-area: about;
     background-color: #fff;
     padding: 4rem;
-
+    
     #mail {
         margin-right: 2rem;
+        margin-left: 1rem;
+    }
+
+    #me {
+        margin-top: 0rem;
+        text-align: justify;
         margin-left: 1rem;
     }
 
@@ -164,6 +163,7 @@ footer {
 
 .box {
     box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    border-radius: 1% 99% 2% 98% / 98% 0% 100% 2% ; 
 }
 
 .tag {
@@ -172,9 +172,64 @@ footer {
 
 #link {
     font-size: 2rem;
-    margin-top: 2rem
+    margin-right:1rem
+
 }
 
 .button {
     margin: 0 .5rem;
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        background-color: color(primary);
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header    header"
+            "section1  section2"
+            "main      main"
+            "section3  section4"
+            "section5  section6"
+            "about     about";
+    }
+
+    main {
+        grid-area: main;
+        min-height: 300px;
+        margin: auto;
+        width:1000px;
+    }
+
+    section:nth-of-type(3) {
+        grid-area: section3;
+        
+        #column1 {
+            float:right;
+            margin:auto;
+            width:650px;
+            margin-bottom: 4rem;
+        }
+    }
+    
+    section:nth-of-type(4) {
+        grid-area: section4;
+    
+        #column2 {
+            float:left;
+            margin:auto;
+            width:650px;
+            margin-bottom: 4rem;
+        }
+    }
+
+    #metext {
+        max-width: 550px;
+    }
 }
