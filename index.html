@@ -11,6 +11,7 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: 'Montserrat', sans-serif;}
 body, html {
   height: 100%;
+  width:100%;
   color: #777;
   line-height: 1.8; 
 }
@@ -36,7 +37,6 @@ animation-iteration-count:infinite;
 animation-direction:alternate;
 animation-play-state:running;
 }
-
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst
 {
@@ -46,7 +46,6 @@ animation-play-state:running;
 75%  {background: #8e44ad; left:0px; top:0px;}
 100% {background: #16a085; left:0px; top:0px;}
 }
-
 /* Standard syntax */
 @keyframes myfirst
 {
@@ -56,7 +55,6 @@ animation-play-state:running;
 75%  {background: #8e44ad; left:0px; top:0px;}
 100% {background: #16a085; left:0px; top:0px;}
 }
-
 /* Modal (pozadí) */
 .modal {
   display: none; /* Hidden by default */
@@ -71,7 +69,6 @@ animation-play-state:running;
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 /* Modal obsah */
 .modal-content {
   background-color: #fefefe;
@@ -80,7 +77,6 @@ animation-play-state:running;
   border: 1px solid #888;
   width: 80%;
 }
-
 /* Modal X */
 .close {
   color: #aaaaaa;
@@ -88,19 +84,16 @@ animation-play-state:running;
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-
 .column {
 	max-width: 1200px;
     margin:auto;
 }
-
 .card-footer {
  max-height: 40px;
 }
@@ -335,7 +328,6 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -346,7 +338,6 @@ function myFunction() {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
     }
 }
-
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
     var x = document.getElementById("navDemo");
@@ -356,27 +347,20 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-
-
 // Get the modal
 var modal = document.getElementById("myModal");
-
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
