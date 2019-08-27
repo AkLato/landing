@@ -102,6 +102,36 @@ animation-play-state:running;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.lang {
+    background-color: #e4002b;
+    color:#fff;
+    font-weight: 900;
+    font-size: 1.1em;
+}
+
+.blink {
+    animation: blink-animation 1.4s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.4s steps(5,start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+.blink2 {
+    animation-delay: 50ms;
+}
+.blink3 {
+    animation-delay: 100ms;
+}
+.blink4 {
+    animation-delay: 150ms;
+}
 </style>
 
 <body>
@@ -115,6 +145,7 @@ animation-play-state:running;
     <a href="#portfolio" class="w3-bar-item w3-button w3-text-dark-grey w3-hide-small w3-hover-white"><i class="fa fa-th"></i> Portfolio</a>
     <a href="#myBtn" class="w3-bar-item w3-button w3-text-dark-grey w3-hide-small w3-hover-white"><i class="fa fa-user"></i> CV</a>
     <a href="#contact" class="w3-bar-item w3-button w3-text-dark-grey w3-hide-small w3-hover-white"><i class="fa fa-envelope"></i> Kontakt</a>
+    <!-- <a href="#" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-hover-white lang"></i> EN</a> -->
   </div>
 
   <!-- Navigace malá -->
@@ -131,16 +162,16 @@ animation-play-state:running;
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUNIOR <span class="w3-hide-small">FRONT-END</span> DEV</span>
     <br>
     <br>
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small"><i class="fab fa-js"></i> Javascript /</span> React</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small"><i class="fab fa-js"></i> Javascript <span class='blink'>/</span></span> React</span>
     <br>
     <br>
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small"><i class="fab fa-css3"></i> HTML /</span> CSS</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small"><i class="fab fa-css3"></i> HTML <span class='blink blink2'>/</span></span> CSS</span>
     <br>
     <br>
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small"><i class="fab fa-bootstrap"></i> Bulma /</span> Bootstrap</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small"><i class="fab fa-bootstrap"></i> Bulma <span class='blink blink3'>/</span></span> Bootstrap</span>
     <br>
     <br>
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small"><i class="fab fa-python"></i> Python /</span> Flask</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small"><i class="fab fa-python"></i> Python <span class='blink blink4'>/</span></span> Flask</span>
   </div>
 </div >
 <br>
@@ -166,7 +197,7 @@ animation-play-state:running;
         </div>
         <footer class="card-footer ">
             <a href="http://masazevracov.com/" class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
-            <a href="https://github.com/AkLato/masazevracov" class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
+            <a href="#" class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
         </footer>
     </div>
 </div>
@@ -185,8 +216,8 @@ animation-play-state:running;
             </div>
         </div>
         <footer class="card-footer ">
-            <a href="https://distracted-bhaskara-9de5f0.netlify.com/introduction" class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
-            <a href="#" class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
+            <a href="https://hungry-goldstine-6e09b6.netlify.com/" class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
+            <a href="https://github.com/AkLato/recepty" class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
         </footer>
     </div>
 </div>
@@ -273,6 +304,7 @@ animation-play-state:running;
 <div class="columns">
         <div class="column is-10 is-offset-1" id='CV'>
             <div>
+                <a class='is-pulled-right' href="https://drive.google.com/file/d/1-i351vigZ1LmBKcZPr0Z7dxQD5oOkC9s/view?usp=sharing"><button class=' button is-primary is-medium'><i class="fas fa-file-download fa-fw"></i>Odkaz na stáhnutí</button></a>
                 <p>Bc. Tomáš Rajsigl</p>
                 <p>Junior Dev</p>
                 <p><b>Věk:</b> 26</p>
