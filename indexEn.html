@@ -109,6 +109,29 @@ animation-play-state:running;
     font-size: 1.1em;
 }
 
+.perks p {
+  margin: 1rem;
+  display:inline-block;
+  border-bottom: rgb(160, 160, 160) 1px solid
+}
+
+.perks {
+    border-bottom: solid 1px rgb(221, 221, 221);
+    box-shadow: 0px 1px 1px rgba(192, 190, 190, 0.329);
+    
+}
+
+.perks p:hover {
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.04);
+}
+
 .blink {
     animation: blink-animation 1.4s steps(5, start) infinite;
     -webkit-animation: blink-animation 1.4s steps(5,start) infinite;
@@ -191,6 +214,32 @@ animation-play-state:running;
         <span class="tag btn">Bootstrap</span>
         <span class="tag btn">Netlify</span>
         </header>
+        <div class='perks '>
+            <p>
+                Responsive design
+            </p>
+            <p>
+                Performance optimalization
+            </p>
+            <p>
+                Commercional project
+            </p>
+            <p>
+                Styling in Bootstrap
+            </p>
+            <p>
+                JavaScript for expandable tiles
+            </p>
+            <p>
+                SVG logo
+            </p>
+            <p>
+                Animations with CSS
+            </p>
+            <p>
+                Hosting on Netlify from GitHubu
+            </p>
+        </div>
         <div class="card-content">
             <div class="content">
                Info page for massage salon. Used Bulma for styling. Top has a carousel, then each service is in a responsive grid with expanding tiles, all images are lazyloaded and compressed. All elements are responsive. Pushed to Netlify from GitHub.
@@ -206,11 +255,52 @@ animation-play-state:running;
 <div class="column">
     <div class="card">
         <header class="card-header">
-        <p class="card-header-title is-size-5">Recipes</p>
+        <p class="card-header-title is-size-5">Pocket Cook</p>
         <span class="tag btn">JS</span>
         <span class="tag btn">React - Gatsby</span>
         <span class="tag btn">GraphQL</span>
         </header>
+        <div class='perks '>
+            <p>
+                React - Gatsby Framework
+            </p>
+            <p>
+                Lazyload images
+            </p>
+            <p>
+                Content management system
+            </p>
+            <p>
+                React components
+            </p>
+            <p>
+                Gatsby plugins
+            </p>
+            <p>
+                Improved functionality via NPM
+            </p>
+            <p>
+                Algolia search
+            </p>
+            <p>
+                Content in Markown files
+            </p>
+            <p>
+                Sorting with tags
+            </p>
+            <p>
+                Data with GraphQL
+            </p>
+            <p>
+                Mobile first
+            </p>
+            <p>
+                Hosting on Netlify from GitHubu
+            </p>
+            <p>
+                Git versioning 
+            </p>
+        </div>
         <div class="card-content">
             <div class="content">
                 Cookbook in a pocket and PC too. Build with React Gatsby hello-world template and many React components. Added sidebar that is populated with recipes from Markdown files. GraphQL is used for connecting Markdown files to Gatsby Node. Recipes have tags to allow sorting. Each recipe page has an image, ingredients, process, video and timer. Netlify CMS is implemented so each recipe can be edited. Site is responsive, has some animations and image lazyload. Published on Netlify through GitHub. 
