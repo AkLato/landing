@@ -7,6 +7,8 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: 'Montserrat', sans-serif;}
 body, html {
@@ -244,8 +246,8 @@ animation-play-state:running;
             </div>
         </div>
         <footer class="card-footer ">
-            <a href="http://masazevracov.com/" class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
-            <a href="#" class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
+            <a href="http://masazevracov.com/" target='_blank' class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
+            <a href="https://github.com/AkLato/masazevracov"  target='_blank' class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
         </footer>
     </div>
 </div>
@@ -303,8 +305,8 @@ animation-play-state:running;
             </div>
         </div>
         <footer class="card-footer ">
-            <a href="https://hungry-goldstine-6e09b6.netlify.com/" class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
-            <a href="https://github.com/AkLato/recepty" class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
+            <a href="https://hungry-goldstine-6e09b6.netlify.com/" target='_blank' class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
+            <a href="https://github.com/AkLato/recepty" target='_blank' class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
         </footer>
     </div>
 </div>
@@ -343,8 +345,8 @@ animation-play-state:running;
             </div>
         </div>
         <footer class="card-footer ">
-            <a href="https://pure-escarpment-50221.herokuapp.com/" class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
-            <a href="https://github.com/AkLato/Currency" class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
+            <a href="https://pure-escarpment-50221.herokuapp.com/" target='_blank' class="card-footer-item has-text-white has-background-grey-darker">Navštívit</a>
+            <a href="https://github.com/AkLato/Currency" target='_blank' class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
         </footer>
     </div>
 </div>
@@ -363,8 +365,8 @@ animation-play-state:running;
             </div>
         </div>
         <footer class="card-footer ">
-            <a href="https://fathomless-hamlet-30104.herokuapp.com/" class="card-footer-item has-text-white has-background-grey-darker ">Navštívit</a>
-            <a href="https://github.com/AkLato/Mind-Distillery" class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
+            <a href="https://fathomless-hamlet-30104.herokuapp.com/" target='_blank' class="card-footer-item has-text-white has-background-grey-darker ">Navštívit</a>
+            <a href="https://github.com/AkLato/Mind-Distillery" target='_blank' class="card-footer-item has-text-white has-background-grey-darker">GitHub</a>
         </footer>
     </div>
 </div>
@@ -460,13 +462,13 @@ animation-play-state:running;
         <br>
         <div class="columns">
         <div class="column is-4">
-            <a class="button is-dark is-fullwidth" href="mailto:rajsigltom@gmail.com">Mail</a>
+                <button class="button is-dark is-fullwidth mailBtn" data-clipboard-text='rajsigltom@gmail.com'>Mail</button>
             </div>
             <div class="column is-4">
-                    <a class="button is-dark is-fullwidth" href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-rajsigl-660683b9/">LinkedIn</a>
+                    <a class="button is-dark is-fullwidth" target='_blank' href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-rajsigl-660683b9/">LinkedIn</a>
             </div>
             <div class="column is-4">
-                <a class="button is-dark is-fullwidth" href="https://github.com/AkLato?tab=repositories">GitHub</a>
+                <a class="button is-dark is-fullwidth" target='_blank' href="https://github.com/AkLato?tab=repositories">GitHub</a>
             </div>
         </div> 
     </div>
@@ -520,6 +522,17 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// clipboard.js
+var clip = new ClipboardJS('.mailBtn');
+var mailBtn = document.querySelector('.mailBtn')
+clip.on("success", function() {
+  document.querySelector('.mailBtn').innerHTML = '<p>Mail zkopírován.</p>';
+  document.querySelector('.mailBtn').style = 'background:#00b33c'
+});
+clip.on("error", function() {
+    document.querySelector('.mailBtn').innerHTML = '<p>Err.</p>';;
+});
 </script>
 </body>
 </html>
